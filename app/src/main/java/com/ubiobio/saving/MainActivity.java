@@ -1,5 +1,6 @@
 package com.ubiobio.saving;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,14 +19,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = findViewById(R.id.fabAdd);
+       FloatingActionButton fab = findViewById(R.id.fabGraph);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                 openGraficos();
             }
         });
+    }
+
+    public void openGraficos(){
+        Intent intent = new Intent(this, Graficos.class);
+        startActivity(intent);
     }
 
     @Override
@@ -49,4 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }
