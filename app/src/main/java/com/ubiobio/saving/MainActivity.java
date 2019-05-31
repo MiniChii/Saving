@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent add = new Intent(view.getContext(), AgregarMovimiento.class);
                 startActivity(add);
+                finish();
 
             }
         });
