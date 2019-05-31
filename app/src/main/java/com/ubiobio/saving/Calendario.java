@@ -33,11 +33,20 @@ public class Calendario extends AppCompatActivity {
         });
     }
 
+    /**
+     *Inicia la actividad que tiene la sección de gráficos
+     *
+     */
     public void openGraficos(){
+
         Intent intent = new Intent(this, Graficos.class);
         startActivity(intent);
     }
 
+    /**
+     *Inicia la actividad que tiene la seccion de Home
+     *
+     */
     public void openHome(){
         Intent intent2 = new Intent(this, Graficos.class);
         startActivity(intent2);
