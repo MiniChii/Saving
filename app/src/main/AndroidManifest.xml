@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_chancho"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Calendario"></activity>
+        <activity
+            android:name=".Calendario"
+            android:label="@string/title_activity_calendario"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Graficos"
             android:label="@string/title_activity_graficos"
