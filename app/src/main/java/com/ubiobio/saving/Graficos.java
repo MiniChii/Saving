@@ -24,11 +24,24 @@ public class Graficos extends AppCompatActivity {
                 openCalendario();
             }
         });
+
+        FloatingActionButton fab2 = findViewById(R.id.fabHome);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
     }
 
     public void openCalendario(){
         Intent intent = new Intent(this, Calendario.class);
         startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent2 = new Intent(this, MainActivity.class);
+        startActivity(intent2);
     }
 
 }
