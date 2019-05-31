@@ -1,6 +1,7 @@
 package com.ubiobio.saving;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,7 +19,7 @@ public class AgregarMovimiento extends AppCompatActivity {
 
 
     private DatePicker datePicker;
-    private EditText editText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,29 +29,38 @@ public class AgregarMovimiento extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        editText = findViewById(R.id.edit_text);
-        FloatingActionButton fab = findViewById(R.id.fab);
+
+        FloatingActionButton fabHome = findViewById(R.id.fabHome);
+        fabHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(view.getContext(), MainActivity.class);
+                startActivity(home);
+                finish();
+
+            }
+        });
+
+        FloatingActionButton fabGuardar = findViewById(R.id.fabGuardar);
+        fabGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(view.getContext(), MainActivity.class);
+                startActivity(home);
+                finish();
+
+            }
+        });
+        /*FloatingActionButton fab = findViewById(R.id.fabAdd);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        Calendar calendar= new GregorianCalendar();
-        this.datePicker = (DatePicker) this.findViewById(R.id.date_value);
-        this.datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), null);
-        datePicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Get user selection
+                Intent add = new Intent(view.getContext(), AgregarMovimiento.class);
+                startActivity(add);
 
-                int y = datePicker.getYear();
-                int m = datePicker.getMonth();
-                int d= datePicker.getDayOfMonth();
-                editText.setText(d+"/"+m+"/"+y);
             }
-        });
+        });*/
+
 
     }
 
