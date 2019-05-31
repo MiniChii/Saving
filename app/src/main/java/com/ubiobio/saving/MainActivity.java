@@ -19,16 +19,27 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = findViewById(R.id.fabAdd);
+       FloatingActionButton fab = findViewById(R.id.fabGraph);
         fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 openGraficos();
+            }
+        });
+
+        FloatingActionButton fabAdd = findViewById(R.id.fabAdd);
+        fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent add = new Intent(view.getContext(), AgregarMovimiento.class);
                 startActivity(add);
-                finish();
-
             }
         });
+    }
+
+    public void openGraficos(){
+        Intent intent = new Intent(this, Graficos.class);
+        startActivity(intent);
     }
 
     @Override
@@ -52,4 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

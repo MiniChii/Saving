@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Saving</string>
     <string name="action_settings">Settings</string>
+
     <string name="title_activity_agregar_movimiento">Agregar Movimiento</string>
-    <string name="formato_fecha">dd/mm/YYYY</string>
+ 
+
+    <string name="title_activity_graficos">Gráficos</string>
+    <string name="title_activity_calendario">Seleccionar Mes</string>
+
 </resources>

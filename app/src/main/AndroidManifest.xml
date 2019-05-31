@@ -4,15 +4,27 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_chancho"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_chancho"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+
             android:name=".AgregarMovimiento"
             android:label="@string/title_activity_agregar_movimiento"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+           
+        <activity
+
+            android:name=".Calendario"
+            android:label="@string/title_activity_calendario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Graficos"
+            android:label="@string/title_activity_graficos"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
