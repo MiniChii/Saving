@@ -23,10 +23,23 @@ public class Calendario extends AppCompatActivity {
                 openGraficos();
             }
         });
+
+        FloatingActionButton fab2 = findViewById(R.id.fabAcept);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHome();
+            }
+        });
     }
 
     public void openGraficos(){
         Intent intent = new Intent(this, Graficos.class);
         startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent2 = new Intent(this, Graficos.class);
+        startActivity(intent2);
     }
 }
