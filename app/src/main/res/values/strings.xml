@@ -6,6 +6,6 @@
  
 
     <string name="title_activity_graficos">Gráficos</string>
-    <string name="title_activity_calendario">Seleccionar Mes</string>
+    <string name="title_activity_calendario">Seleccionar Fechas</string>
 
 </resources>
