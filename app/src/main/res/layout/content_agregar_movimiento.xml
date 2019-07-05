@@ -80,79 +80,81 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    >
 
 
-                    <ImageButton
-                        android:id="@+id/btn_comida"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_comida"
-                        android:textSize="20sp" />
+                    <RadioGroup
+                        android:id="@+id/first_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
 
-                    <ImageButton
-                        android:id="@+id/btn_hogar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_home_black"
-                        android:textSize="20sp" />
+                        >
 
-                    <ImageButton
-                        android:id="@+id/btn_transporte"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_transporte"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/rb_comida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_comida" />
 
-                    <ImageButton
-                        android:id="@+id/btn_shopping"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_shopping"
-                        android:textSize="20sp" />
-                </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/btn_ingreso"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_ingreso"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/rb_casa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_home_black"
+                             />
+                        <RadioButton
+                            android:id="@+id/rb_transporte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_transporte"
+                            />
+                        <RadioButton
+                            android:id="@+id/rb_shopping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_shopping"
+                            />
+                    </RadioGroup>
+                    <RadioGroup
+                        android:id="@+id/second_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
 
-                    <ImageButton
-                        android:id="@+id/btn_salud"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_salud"
-                        android:textSize="20sp" />
+                        >
 
-                    <ImageButton
-                        android:id="@+id/btn_entretenimiento"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_entretenimiento"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/rb_ingreso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_ingreso" />
 
-                    <ImageButton
-                        android:id="@+id/btn_misc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:src="@drawable/ic_misc"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/rb_salud"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_salud"
+                            />
+                        <RadioButton
+                            android:id="@+id/rb_entretenimiento"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_entretenimiento"
+                            />
+                        <RadioButton
+                            android:id="@+id/rb_misc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/ic_misc"
+                            />
+                    </RadioGroup>
 
                 </LinearLayout>
 
