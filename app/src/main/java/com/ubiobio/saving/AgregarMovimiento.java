@@ -11,6 +11,7 @@ import android.view.View;
 
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -19,7 +20,11 @@ public class AgregarMovimiento extends AppCompatActivity {
 
 
     private DatePicker datePicker;
+    private RadioGroup mFirstGroup;
+    private RadioGroup mSecondGroup;
 
+    private boolean isChecking = true;
+    private int mCheckedId = R.id.rb_comida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,7 @@ public class AgregarMovimiento extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
+        /*para que funciona el boton flotante inicio*/
         FloatingActionButton fabHome = findViewById(R.id.fabHome);
         fabHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +45,7 @@ public class AgregarMovimiento extends AppCompatActivity {
 
             }
         });
-
+        /*Boton flotante guardar*/
         FloatingActionButton fabGuardar = findViewById(R.id.fabGuardar);
         fabGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,15 +56,32 @@ public class AgregarMovimiento extends AppCompatActivity {
 
             }
         });
-        /*FloatingActionButton fab = findViewById(R.id.fabAdd);
-        fab.setOnClickListener(new View.OnClickListener() {
+        /*para que se seleccione solo un item del radioButton*/
+        mFirstGroup = (RadioGroup) findViewById(R.id.first_group);
+        mSecondGroup = (RadioGroup) findViewById(R.id.second_group);
+        mFirstGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                Intent add = new Intent(view.getContext(), AgregarMovimiento.class);
-                startActivity(add);
-
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mSecondGroup.clearCheck();
+                    mCheckedId = checkedId;
+                }
+                isChecking = true;
             }
-        });*/
+        });
+        mSecondGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != -1 && isChecking) {
+                    isChecking = false;
+                    mFirstGroup.clearCheck();
+                    mCheckedId = checkedId;
+                }
+                isChecking = true;
+            }
+        });
+
 
 
     }
